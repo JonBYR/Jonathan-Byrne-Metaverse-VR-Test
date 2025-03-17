@@ -5,7 +5,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2369602c1b039b341943b946f16a717d, type: 3}
@@ -53,7 +52,22 @@ PrefabInstance:
       value: Powerboat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2369602c1b039b341943b946f16a717d, type: 3}
+--- !u!1 &89866716974239743 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2369602c1b039b341943b946f16a717d, type: 3}
+  m_PrefabInstance: {fileID: 1008292416889582254}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &4614292262262037232
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89866716974239743}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.0888214, y: 2.4466014, z: 10.22805}
+  m_Center: {x: -0.46006012, y: 0.7233004, z: -0.49240875}
