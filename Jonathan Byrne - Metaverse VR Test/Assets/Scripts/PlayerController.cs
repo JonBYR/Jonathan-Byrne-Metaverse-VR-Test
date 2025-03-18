@@ -5,17 +5,14 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody playerRb;
-    public float moveSpeed;
+    public float moveForce;
     private Vector2 moveDirection;
     public InputActionReference move; //New input system learnt from this tutorial https://www.youtube.com/watch?v=ONlMEZs9Rgw
-    private Transform position;
-    private float rotationinY;
-    private float acceleration = 0.5f;
+    public float torqueSpeed;
     // Start is called before the first frame update
     void Start()
     {
-        position = this.gameObject.GetComponent<Transform>();
-        rotationinY = 0;
+        
     }
 
     // Update is called once per frame
@@ -25,17 +22,23 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        playerRb.velocity = new Vector3(moveDirection.x * moveSpeed, 0, moveDirection.y * moveSpeed);
         if (moveDirection.x != 0)
         {
-            if (moveDirection.x < 0) rotationinY = -0.1f;
-            else if (moveDirection.x > 0) rotationinY = 0.1f;
-            transform.Rotate(new Vector3(0, rotationinY, 0), Space.Self);
+            playerRb.angularDrag = 0f;
+            playerRb.AddTorque(transform.up * moveDirection.x * torqueSpeed);
         }
         else
         {
-            rotationinY = 0;
-            transform.Rotate(new Vector3(0, rotationinY, 0), Space.Self);
+            playerRb.angularDrag = 0.8f;
+        }
+        if(moveDirection.y != 0)
+        {
+            playerRb.drag = 0f;
+            playerRb.AddForce(transform.forward * moveDirection.y * moveForce);
+        }
+        else
+        {
+            playerRb.drag = moveForce / 10;
         }
     }
 }
