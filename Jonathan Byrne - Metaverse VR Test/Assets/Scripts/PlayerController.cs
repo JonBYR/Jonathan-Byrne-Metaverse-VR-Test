@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] InputActionReference move; //New input system learnt from this tutorial https://www.youtube.com/watch?v=ONlMEZs9Rgw
     [SerializeField] float torqueSpeed;
     bool capsized = false;
+    [SerializeField] private float timer = 3.0f;
+    bool showUI = false;
+    [SerializeField] GameObject winPanel;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +23,14 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         moveDirection = move.action.ReadValue<Vector2>();
+        if(ObjectiveZoneReached.triggerEntered == true && moveDirection.x == 0 && moveDirection.y == 0 && showUI == false)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0) showUI = true;
+        }
         if (transform.rotation.x >= 160 || transform.rotation.z >= 160) capsized = true; //should the boat have crashed for any reason and therefore be the wrong way up, disallow movement
         else capsized = false;
+        if (showUI) DisplayWinUI();
     }
     private void FixedUpdate()
     {
@@ -46,5 +55,9 @@ public class PlayerController : MonoBehaviour
                 playerRb.drag = moveForce / 10;
             }
         }
+    }
+    void DisplayWinUI()
+    {
+        winPanel.SetActive(true);
     }
 }

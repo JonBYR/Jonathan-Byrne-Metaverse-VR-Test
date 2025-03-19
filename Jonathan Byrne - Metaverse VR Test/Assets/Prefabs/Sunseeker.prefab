@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1841330082780567042}
   - component: {fileID: 7722170251240295157}
   - component: {fileID: 8985598642447898076}
+  - component: {fileID: 3501406393399164171}
   m_Layer: 0
   m_Name: Sunseeker
   m_TagString: Enemy
@@ -97,7 +98,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3731492778869375555}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: e416c5777030992459f64c4fd29e3e55, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -150,3 +151,16 @@ MonoBehaviour:
   time: 0
   timeScale: 0.1
   checkpoints: []
+  torqueForce: 0.5
+--- !u!114 &3501406393399164171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3731492778869375555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edf445099d77d344e8db3fc3fb1799bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
