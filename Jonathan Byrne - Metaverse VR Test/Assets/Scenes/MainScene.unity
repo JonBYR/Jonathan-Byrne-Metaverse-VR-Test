@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &180790241
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -605,11 +605,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4072164758961363193, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4072164758961363193, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 4072164758961363193, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -625,7 +625,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: degreePerSecond
-      value: 45
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: checkpoints.Array.size
@@ -2126,7 +2126,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 68.68
+  field of view: 60.000004
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -2151,14 +2151,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007155712}
-  m_LocalRotation: {x: 0.8550929, y: -0, z: -0, w: 0.5184749}
-  m_LocalPosition: {x: -0.47000122, y: 17.089996, z: 10.290001}
+  m_LocalRotation: {x: 0.842205, y: -0.026213454, z: -0.016753208, w: 0.53825927}
+  m_LocalPosition: {x: 1.2000122, y: 19.889984, z: 8.930008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 883783991}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 117.54, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 24.834, y: 0, z: 0}
 --- !u!114 &2007155716
 MonoBehaviour:
   m_ObjectHideFlags: 0

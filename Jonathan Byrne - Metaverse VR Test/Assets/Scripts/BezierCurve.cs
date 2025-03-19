@@ -15,7 +15,7 @@ public class BezierCurve : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
     Vector3 GetBezier(List<GameObject> points, float t)
     {
@@ -27,7 +27,7 @@ public class BezierCurve : MonoBehaviour
     void FixedUpdate()
     {
         time += Time.deltaTime * timeScale;
-        if(time >= 1f && endReached != true)
+        if(time >= 1f)
         {
             endReached = true;
             time = 0;
@@ -42,7 +42,6 @@ public class BezierCurve : MonoBehaviour
             {
                 endReached = false;
                 time = 0;
-                totalRotation = 0;
                 checkpoints.Reverse();
             }
         }
@@ -51,12 +50,12 @@ public class BezierCurve : MonoBehaviour
             Vector3 newPosition = GetBezier(checkpoints, time);
             transform.LookAt(newPosition, -Vector3.up); //ship needs to be turning towards the position on the bezier curve, so use lookAt
             transform.position = new Vector3(newPosition.x, transform.position.y, newPosition.z);
+            totalRotation = 0;
         }
     }
     void RotateShip()
     {
-        float currentY = transform.localRotation.eulerAngles.y;
-        transform.localRotation = Quaternion.Euler(-90, currentY + (Time.deltaTime * degreePerSecond), 0); //rotate boat so that it flips it's direction before traversing back along the path
+        transform.RotateAround(transform.position, new Vector3(0, 1, 0), Time.deltaTime * degreePerSecond);
         totalRotation += Time.deltaTime * degreePerSecond;
     }
 }

@@ -13,7 +13,6 @@ public static class BezierEquation
         float u3 = u2 * u;
         float t3 = t2 * t;
         Vector3 result = (u3) * p0 + (3f * u2 * t) * p1 + (3f * u * t2) * p2 + (t3) * p3;
-        Debug.Log(result);
         return result;
     }
     public static void DrawLines(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3, float time)
