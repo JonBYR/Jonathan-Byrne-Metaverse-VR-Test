@@ -55,7 +55,7 @@ public class BezierCurve : MonoBehaviour
     }
     void RotateShip()
     {
-        transform.RotateAround(transform.position, new Vector3(0, 1, 0), Time.deltaTime * degreePerSecond);
-        totalRotation += Time.deltaTime * degreePerSecond;
+        transform.RotateAround(transform.position, new Vector3(0, 1, 0), Time.fixedDeltaTime * degreePerSecond);
+        totalRotation += Time.fixedDeltaTime * degreePerSecond;
     }
 }

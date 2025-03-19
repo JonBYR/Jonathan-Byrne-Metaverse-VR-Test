@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
             if (moveDirection.x != 0)
             {
                 playerRb.angularDrag = 0f;
-                playerRb.AddTorque(transform.forward * moveDirection.x * torqueSpeed); //turning will be in the z axis
+                playerRb.AddTorque(transform.up * moveDirection.x * torqueSpeed); //turning will be in the z axis
             }
             else
             {
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
             if (moveDirection.y != 0)
             {
                 playerRb.drag = 0f;
-                playerRb.AddForce(-transform.up * moveDirection.y * moveForce); //boat is rotated in the x direction, so movement will be in the y axis
+                playerRb.AddForce(transform.forward * moveDirection.y * moveForce); //boat is rotated in the x direction, so movement will be in the y axis
             }
             else
             {

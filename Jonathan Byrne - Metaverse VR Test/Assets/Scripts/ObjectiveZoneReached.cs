@@ -11,7 +11,11 @@ public class ObjectiveZoneReached : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player") triggerEntered = true; //will be designated true when entered
+        if (other.gameObject.tag == "Player")
+        {
+            triggerEntered = true; //will be designated true when entered
+        }
+
     }
     private void OnTriggerExit(Collider other)
     {
