@@ -136,6 +136,7 @@ MonoBehaviour:
   rb: {fileID: 1841330082780567042}
   depthBeforeSubmerged: 1
   displacmentAmount: 2
+  depthLevel: 0
 --- !u!114 &8985598642447898076
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -47,7 +47,7 @@ public class BezierCurve : MonoBehaviour
                 
             }
         }
-        if(endReached == false)
+        else if(endReached == false)
         {
             Vector3 newPosition = GetBezier(checkpoints, time);
             transform.LookAt(newPosition, -Vector3.up); //ship needs to be turning towards the position on the bezier curve, so use lookAt

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
-    public Rigidbody playerRb;
+    [SerializeField] Rigidbody playerRb;
     [SerializeField] float moveForce;
     private Vector2 moveDirection;
     [SerializeField] InputActionReference move; //New input system learnt from this tutorial https://www.youtube.com/watch?v=ONlMEZs9Rgw
@@ -25,8 +25,11 @@ public class PlayerController : MonoBehaviour
         moveDirection = move.action.ReadValue<Vector2>();
         if(ObjectiveZoneReached.triggerEntered == true && moveDirection.x == 0 && moveDirection.y == 0 && showUI == false)
         {
-            timer -= Time.deltaTime;
-            if (timer <= 0) showUI = true;
+            if(Mathf.Abs(transform.rotation.eulerAngles.y) >= 120 && Mathf.Abs(transform.rotation.eulerAngles.y) <= 240) //ship must be docked portside, so y angle must fall between these two angles
+            {
+                timer -= Time.deltaTime;
+                if (timer <= 0) showUI = true;
+            }
         }
         if (Mathf.Abs(transform.rotation.eulerAngles.x) >= 90 && Mathf.Abs(transform.rotation.eulerAngles.x) <= 270) capsized = true;
         else if (Mathf.Abs(transform.rotation.eulerAngles.z) >= 90 && Mathf.Abs(transform.rotation.eulerAngles.z) <= 270) capsized = true; //should the boat have crashed for any reason and therefore be the wrong way up, disallow movement
@@ -39,8 +42,9 @@ public class PlayerController : MonoBehaviour
         {
             if (moveDirection.x != 0)
             {
+                Debug.Log("Current up: " + transform.up);
                 playerRb.angularDrag = 0f;
-                playerRb.AddTorque(transform.up * moveDirection.x * torqueSpeed); //turning will be in the z axis
+                playerRb.AddTorque(transform.up * moveDirection.x * torqueSpeed); //turning will be in the y axis
             }
             else
             {
@@ -49,7 +53,7 @@ public class PlayerController : MonoBehaviour
             if (moveDirection.y != 0)
             {
                 playerRb.drag = 0f;
-                playerRb.AddForce(transform.forward * moveDirection.y * moveForce); //boat is rotated in the x direction, so movement will be in the y axis
+                playerRb.AddForce(transform.forward * moveDirection.y * moveForce);
             }
             else
             {
