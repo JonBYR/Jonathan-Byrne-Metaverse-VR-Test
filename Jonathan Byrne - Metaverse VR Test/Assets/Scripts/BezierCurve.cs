@@ -42,7 +42,9 @@ public class BezierCurve : MonoBehaviour
             {
                 endReached = false;
                 time = 0;
+                totalRotation = 0;
                 checkpoints.Reverse();
+                
             }
         }
         if(endReached == false)
@@ -50,12 +52,12 @@ public class BezierCurve : MonoBehaviour
             Vector3 newPosition = GetBezier(checkpoints, time);
             transform.LookAt(newPosition, -Vector3.up); //ship needs to be turning towards the position on the bezier curve, so use lookAt
             transform.position = new Vector3(newPosition.x, transform.position.y, newPosition.z);
-            totalRotation = 0;
         }
     }
     void RotateShip()
     {
         transform.RotateAround(transform.position, new Vector3(0, 1, 0), Time.fixedDeltaTime * degreePerSecond);
         totalRotation += Time.fixedDeltaTime * degreePerSecond;
+        Debug.Log("Current Rotation:" + transform.rotation);
     }
 }

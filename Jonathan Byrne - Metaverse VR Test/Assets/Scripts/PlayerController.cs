@@ -28,7 +28,8 @@ public class PlayerController : MonoBehaviour
             timer -= Time.deltaTime;
             if (timer <= 0) showUI = true;
         }
-        if (transform.rotation.x >= 160 || transform.rotation.z >= 160) capsized = true; //should the boat have crashed for any reason and therefore be the wrong way up, disallow movement
+        if (Mathf.Abs(transform.rotation.eulerAngles.x) >= 90 && Mathf.Abs(transform.rotation.eulerAngles.x) <= 270) capsized = true;
+        else if (Mathf.Abs(transform.rotation.eulerAngles.z) >= 90 && Mathf.Abs(transform.rotation.eulerAngles.z) <= 270) capsized = true; //should the boat have crashed for any reason and therefore be the wrong way up, disallow movement
         else capsized = false;
         if (showUI) DisplayWinUI();
     }
