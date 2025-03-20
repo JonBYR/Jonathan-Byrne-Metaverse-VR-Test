@@ -42,15 +42,16 @@ public class Bouyancy : MonoBehaviour
     void FixedUpdate()
 
     {
-        pointsUnderWater = 0;
+        pointsUnderWater = 0; //if the pointsUnderWater is at any point not 0, the rigidbody is treated as being under water
         for (int i = 0; i < floatingTransforms.Length; i++)
         {
             float diff = floatingTransforms[i].position.y - depth; //check if point is underwater
             if (diff < 0)
             {
-                playerRb.AddForceAtPosition(Vector3.up * power * Mathf.Abs(diff), floatingTransforms[i].position, ForceMode.Force); //apply force to point so that it is no longer underwater
+                playerRb.AddForceAtPosition(Vector3.up * power * Mathf.Abs(diff), floatingTransforms[i].position, ForceMode.Force); //apply upwards force to point so that it is no longer underwater
+                //lower the point the stronger the force
                 pointsUnderWater += 1;
-                if (!underwater)
+                if (!underwater) //if the object was previously not underwater
                 {
                     underwater = true;
                     SwitchState(true);
@@ -58,7 +59,7 @@ public class Bouyancy : MonoBehaviour
             }
         }
 
-        if (underwater && pointsUnderWater == 0)
+        if (underwater && pointsUnderWater == 0) //if the rigidbody was underwater it is now no longer underwater
         {
             underwater = false;
             SwitchState(false);
@@ -66,7 +67,7 @@ public class Bouyancy : MonoBehaviour
     }
     void SwitchState(bool submerged)
     {
-        if (submerged)
+        if (submerged) //apply relevant drag to objects above or below the water
         {
             playerRb.drag = underWaterDrag; //required drag forces for a submerged object
             playerRb.angularDrag = underWaterAngularDrag;
