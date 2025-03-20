@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Floating : MonoBehaviour
+public class SunseekerBuoyancy : MonoBehaviour
 {
     public Rigidbody rb;
     [SerializeField] private float depthBeforeSubmerged = 1f;

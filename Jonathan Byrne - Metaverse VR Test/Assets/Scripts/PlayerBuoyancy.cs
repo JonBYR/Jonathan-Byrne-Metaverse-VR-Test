@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine; //https://www.youtube.com/watch?v=iasDPyC0QOg used this tutorial in order to implement the bouyancy for the speedboat. This is because the bouyancy needs to be calculated at other points around
 //the boat, rather than the midpoint of the boat
 
-public class Bouyancy : MonoBehaviour
+public class PlayerBuoyancy : MonoBehaviour
 {
     [SerializeField] Transform[] floatingTransforms; //get Transforms of all positions that allow object to be bouyant
 
