@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class BezierCurve : MonoBehaviour
 {
-    [SerializeField] private float time;
-    private bool endReached = false;
-    [SerializeField] private float timeScale;
-    [SerializeField] private List<GameObject> checkpoints = new List<GameObject>();
-    [SerializeField] private float totalRotation = 0;
-    [SerializeField] private float degreePerSecond = 10f;
-    [SerializeField] private float rotationAmount = 180f;
-    float priorY;
+    [SerializeField] float time;
+    bool endReached = false;
+    [SerializeField] float timeScale;
+    [SerializeField] List<GameObject> checkpoints = new List<GameObject>();
+    [SerializeField] float totalRotation = 0;
+    [SerializeField] float degreePerSecond = 10f;
+    [SerializeField] float rotationAmount = 180f;
     // Start is called before the first frame update
     void Start()
     {
