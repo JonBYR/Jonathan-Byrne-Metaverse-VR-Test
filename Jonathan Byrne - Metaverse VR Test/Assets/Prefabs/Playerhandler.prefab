@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reset: {fileID: 6822758454351669128, guid: f0fb076739cae0d4b89d81bcd6903d54, type: 3}
+  exit: {fileID: 6700225294359836082, guid: f0fb076739cae0d4b89d81bcd6903d54, type: 3}
 --- !u!114 &8231308613270224416
 MonoBehaviour:
   m_ObjectHideFlags: 0
