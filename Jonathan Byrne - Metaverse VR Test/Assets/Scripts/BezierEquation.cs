@@ -12,6 +12,8 @@ public static class BezierEquation
         float u2 = u * u;
         float u3 = u2 * u;
         float t3 = t2 * t;
+        float u4 = u3 * u2;
+        float t4 = t3 * t2;
         Vector3 result = (u3) * p0 + (3f * u2 * t) * p1 + (3f * u * t2) * p2 + (t3) * p3;
         return result;
     }
