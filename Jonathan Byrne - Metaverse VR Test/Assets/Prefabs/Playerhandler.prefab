@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 8231308613270224431}
   - component: {fileID: 8231308613270224420}
   - component: {fileID: 8231308613270224419}
-  - component: {fileID: 8231308613270224418}
   - component: {fileID: 8231308613270224417}
   - component: {fileID: 8231308613270224416}
   - component: {fileID: 579334441323254966}
+  - component: {fileID: 5439156409491750728}
   m_Layer: 0
   m_Name: Playerhandler
   m_TagString: Untagged
@@ -84,22 +84,6 @@ MonoBehaviour:
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &8231308613270224418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8231308613270224430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1cc21bc5daef434c99d0478be7620e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 8231308613270224420}
-  depthBeforeSubmerged: 0
-  displacmentAmount: 5
-  depthLevel: 0
 --- !u!114 &8231308613270224417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,8 +115,6 @@ MonoBehaviour:
   torqueSpeed: 0.5
   timer: 3
   winPanel: {fileID: 0}
-  maxY: 60
-  torquePosition: {fileID: 0}
 --- !u!114 &579334441323254966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,13 +127,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5dc0a39b12a8c949a16c948232ad354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Floaters: []
-  UnderWaterDrag: 3
-  UnderWaterAngularDrag: 1
-  AirDrag: 0
-  AirAngularDrag: 0.05
-  FloatingPower: 15
-  WaterHeight: 0
+  floatingTransforms: []
+  underWaterDrag: 3
+  underWaterAngularDrag: 1
+  airDrag: 0
+  airAngularDrag: 0.05
+  power: 15
+  depth: 0
+--- !u!114 &5439156409491750728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8231308613270224430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7c548a6a7709f14583cde5ece5276ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+  backCamera: {fileID: 0}
+  cameraButton: {fileID: -5622710644236921568, guid: f0fb076739cae0d4b89d81bcd6903d54, type: 3}
 --- !u!1001 &8231308613643504691
 PrefabInstance:
   m_ObjectHideFlags: 0
