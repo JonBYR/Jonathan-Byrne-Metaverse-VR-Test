@@ -13,4 +13,5 @@ public class SunseekerCollision : MonoBehaviour
     {
         this.gameObject.GetComponent<Rigidbody>().isKinematic = false;
     }
+    
 }

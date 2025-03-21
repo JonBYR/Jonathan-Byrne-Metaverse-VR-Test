@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float timer = 3.0f;
     bool showUI = false;
     [SerializeField] GameObject winPanel;
+    [SerializeField] float dragWhileMoving;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +41,7 @@ public class PlayerController : MonoBehaviour
     {
         if(!capsized)
         {
-            if (moveDirection.x != 0)
+            if (moveDirection.x != 0 && moveDirection.y != 0)
             {
                 Debug.Log("Current up: " + transform.up);
                 playerRb.angularDrag = 0f;
@@ -52,7 +53,7 @@ public class PlayerController : MonoBehaviour
             }
             if (moveDirection.y != 0)
             {
-                playerRb.drag = 0f;
+                playerRb.drag = dragWhileMoving;
                 playerRb.AddForce(transform.forward * moveDirection.y * moveForce);
             }
             else

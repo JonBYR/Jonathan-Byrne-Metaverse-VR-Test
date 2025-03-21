@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8231308613270224416}
   - component: {fileID: 579334441323254966}
   - component: {fileID: 5439156409491750728}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Playerhandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,6 +115,7 @@ MonoBehaviour:
   torqueSpeed: 0.5
   timer: 3
   winPanel: {fileID: 0}
+  dragWhileMoving: 0
 --- !u!114 &579334441323254966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,6 +157,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8231308613270224431}
     m_Modifications:
+    - target: {fileID: 890458147, guid: a3295116c213ae041bdeb8472e783b36, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 890458148, guid: a3295116c213ae041bdeb8472e783b36, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.78
@@ -179,6 +184,10 @@ PrefabInstance:
     - target: {fileID: 89866716974239743, guid: a3295116c213ae041bdeb8472e783b36, type: 3}
       propertyPath: m_Name
       value: Powerboat
+      objectReference: {fileID: 0}
+    - target: {fileID: 89866716974239743, guid: a3295116c213ae041bdeb8472e783b36, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 89866716974239743, guid: a3295116c213ae041bdeb8472e783b36, type: 3}
       propertyPath: m_IsActive
@@ -244,9 +253,17 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2145073746741145119, guid: a3295116c213ae041bdeb8472e783b36, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2737521049102564102, guid: a3295116c213ae041bdeb8472e783b36, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3068887238570586196, guid: a3295116c213ae041bdeb8472e783b36, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3099306994071655031, guid: a3295116c213ae041bdeb8472e783b36, type: 3}
       propertyPath: m_Convex
@@ -277,6 +294,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3538249139255219298, guid: a3295116c213ae041bdeb8472e783b36, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3538249139255219298, guid: a3295116c213ae041bdeb8472e783b36, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -305,8 +326,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7825398781405676063, guid: a3295116c213ae041bdeb8472e783b36, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7825398781405676063, guid: a3295116c213ae041bdeb8472e783b36, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8709327448021089336, guid: a3295116c213ae041bdeb8472e783b36, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9044627260411713363, guid: a3295116c213ae041bdeb8472e783b36, type: 3}

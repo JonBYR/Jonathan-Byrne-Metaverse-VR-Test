@@ -25,33 +25,35 @@ public class BezierCurve : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        time += Time.deltaTime * timeScale;
-        if(time >= 1f)
-        {
-            endReached = true;
-            time = 0;
-        }
-        if(endReached == true)
-        {
-            if (Mathf.Abs(totalRotation) < Mathf.Abs(rotationAmount))
+        
+            time += Time.deltaTime * timeScale;
+            if (time >= 1f)
             {
-                RotateShip();
-            }
-            else
-            {
-                endReached = false;
+                endReached = true;
                 time = 0;
-                totalRotation = 0;
-                checkpoints.Reverse();
-                
             }
-        }
-        else if(endReached == false)
-        {
-            Vector3 newPosition = GetBezier(checkpoints, time);
-            transform.LookAt(newPosition, -Vector3.up); //ship needs to be turning towards the position on the bezier curve, so use lookAt
-            transform.position = new Vector3(newPosition.x, transform.position.y, newPosition.z);
-        }
+            if (endReached == true)
+            {
+                if (Mathf.Abs(totalRotation) < Mathf.Abs(rotationAmount))
+                {
+                    RotateShip();
+                }
+                else
+                {
+                    endReached = false;
+                    time = 0;
+                    totalRotation = 0;
+                    checkpoints.Reverse();
+
+                }
+            }
+            else if (endReached == false)
+            {
+                Vector3 newPosition = GetBezier(checkpoints, time);
+                transform.LookAt(newPosition, -Vector3.up); //ship needs to be turning towards the position on the bezier curve, so use lookAt
+                transform.position = new Vector3(newPosition.x, transform.position.y, newPosition.z);
+            }
+        
     }
     void RotateShip()
     {
