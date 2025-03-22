@@ -13,8 +13,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float timer = 3.0f;
     bool showUI = false;
     [SerializeField] GameObject winPanel;
-    [SerializeField] float dragWhileMoving;
     private SwitchCameras cam;
+    [SerializeField] float dragFactor = 100;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,8 +44,8 @@ public class PlayerController : MonoBehaviour
         Debug.Log("This is the velocity: " + playerRb.velocity.magnitude);
         if(!capsized)
         {
-            //if (moveDirection.y > 0) cam.ChangePriorities(true);
-            //else if (moveDirection.y < 0) cam.ChangePriorities(false);
+            if (moveDirection.y > 0) cam.ChangePriorities(true);
+            else if (moveDirection.y < 0) cam.ChangePriorities(false);
             if (moveDirection.x != 0 && moveDirection.y != 0)
             { //only turn when there is throttle
                 playerRb.angularDrag = 0f;
@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
             }
             if (moveDirection.y != 0)
             {
-                playerRb.drag = dragWhileMoving;
+                playerRb.drag = playerRb.velocity.magnitude / dragFactor; //boat should have a maximum acceleration, so apply proportional drag based on current speed
                 playerRb.AddForce(transform.forward * moveDirection.y * moveForce); //move forwards based on directional input, acceleration applied naturally
             }
             else

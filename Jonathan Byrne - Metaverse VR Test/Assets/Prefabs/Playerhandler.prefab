@@ -116,7 +116,7 @@ MonoBehaviour:
   torqueSpeed: 0.5
   timer: 3
   winPanel: {fileID: 0}
-  dragWhileMoving: 0
+  dragFactor: 1000
 --- !u!114 &579334441323254966
 MonoBehaviour:
   m_ObjectHideFlags: 0

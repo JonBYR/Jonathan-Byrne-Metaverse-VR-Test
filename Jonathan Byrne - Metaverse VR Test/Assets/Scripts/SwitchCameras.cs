@@ -10,6 +10,7 @@ public class SwitchCameras : MonoBehaviour
     [SerializeField] InputActionReference cameraButton;
     private CinemachineVirtualCamera currentCamera;
     // Start is called before the first frame update
+    /*
     void Start()
     {
         currentCamera = mainCamera;
@@ -43,6 +44,7 @@ public class SwitchCameras : MonoBehaviour
             backCamera.Priority = 20;
         }
     }
+    */
     public void ChangePriorities(bool forward)
     {
         if (forward)
