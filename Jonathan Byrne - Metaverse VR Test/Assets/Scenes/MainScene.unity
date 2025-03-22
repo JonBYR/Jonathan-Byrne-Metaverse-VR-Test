@@ -6283,11 +6283,11 @@ PrefabInstance:
       objectReference: {fileID: 435555821}
     - target: {fileID: 8231308613270224416, guid: f3231fb7d99033443ad0b687536b2673, type: 3}
       propertyPath: moveForce
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8231308613270224416, guid: f3231fb7d99033443ad0b687536b2673, type: 3}
       propertyPath: torqueSpeed
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8231308613270224416, guid: f3231fb7d99033443ad0b687536b2673, type: 3}
       propertyPath: torquePosition
@@ -6295,7 +6295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8231308613270224416, guid: f3231fb7d99033443ad0b687536b2673, type: 3}
       propertyPath: dragWhileMoving
-      value: 0
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8231308613270224418, guid: f3231fb7d99033443ad0b687536b2673, type: 3}
       propertyPath: m_Enabled

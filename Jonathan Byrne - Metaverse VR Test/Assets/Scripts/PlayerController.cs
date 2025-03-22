@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
             //if (moveDirection.y > 0) cam.ChangePriorities(true);
             //else if (moveDirection.y < 0) cam.ChangePriorities(false);
             if (moveDirection.x != 0 && moveDirection.y != 0)
-            { //only turn should there also be forward momentum 
+            { //only turn when there is throttle
                 playerRb.angularDrag = 0f;
                 playerRb.AddTorque(transform.up * moveDirection.x * torqueSpeed); //turning will be in the y axis
             }
