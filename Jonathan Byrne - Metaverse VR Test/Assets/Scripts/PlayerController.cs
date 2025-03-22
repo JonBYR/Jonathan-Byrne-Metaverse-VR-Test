@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                playerRb.angularDrag = 0.8f;
+                playerRb.angularDrag = 0.8f; //set drag to slow rotation
             }
             if (moveDirection.y != 0)
             {
@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                playerRb.drag = moveForce / 10;
+                playerRb.drag = moveForce / 10; //set drag to slow acceleration 
             }
         }
     }

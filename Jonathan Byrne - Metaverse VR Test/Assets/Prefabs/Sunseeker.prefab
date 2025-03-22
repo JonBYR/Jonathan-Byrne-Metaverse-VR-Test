@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 772290688933022231}
   - component: {fileID: 1841330082780567042}
   - component: {fileID: 8985598642447898076}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Sunseeker
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -137,3 +137,4 @@ MonoBehaviour:
   totalRotation: 0
   degreePerSecond: 10
   rotationAmount: 180
+  drawBezier: 0
