@@ -7,10 +7,11 @@ public class BezierCurve : MonoBehaviour
     [SerializeField] float time;
     bool endReached = false;
     [SerializeField] float timeScale;
-    [SerializeField] List<GameObject> checkpoints = new List<GameObject>();
+    [SerializeField] List<GameObject> checkpoints = new List<GameObject>(); //points to generate the bezier path
     [SerializeField] float totalRotation = 0;
     [SerializeField] float degreePerSecond = 10f;
     [SerializeField] float rotationAmount = 180f;
+    [SerializeField] bool drawBezier = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,14 +20,14 @@ public class BezierCurve : MonoBehaviour
     Vector3 GetBezier(List<GameObject> points, float t)
     {
         Vector3 resultingPos = BezierEquation.GetPointOnCurve(points[0].transform.position, points[1].transform.position, points[2].transform.position, points[3].transform.position, t);
-        BezierEquation.DrawLines(points[0].transform.position, points[1].transform.position, points[2].transform.position, points[3].transform.position, t);
+        BezierEquation.DrawLines(points[0].transform.position, points[1].transform.position, points[2].transform.position, points[3].transform.position, t, drawBezier);
         return resultingPos;
     }
     // Update is called once per frame
     void FixedUpdate()
     {
         
-            time += Time.deltaTime * timeScale;
+            time += Time.fixedDeltaTime * timeScale; //time value for Bezier
             if (time >= 1f)
             {
                 endReached = true;
@@ -36,29 +37,28 @@ public class BezierCurve : MonoBehaviour
             {
                 if (Mathf.Abs(totalRotation) < Mathf.Abs(rotationAmount))
                 {
-                    RotateShip();
+                    RotateShip(); //start rotating the ship if the total rotation has not yet reached the desired rotation to traverse back
                 }
                 else
                 {
                     endReached = false;
                     time = 0;
-                    totalRotation = 0;
-                    checkpoints.Reverse();
+                    totalRotation = 0; //reset values
+                    checkpoints.Reverse(); //reverse bezier curve points so the ship starts to travel back
 
                 }
             }
-            else if (endReached == false)
+            else if (endReached == false) //if the ship has not reached the end of the bezier path
             {
-                Vector3 newPosition = GetBezier(checkpoints, time);
+                Vector3 newPosition = GetBezier(checkpoints, time); //get position it needs to travel to
                 transform.LookAt(newPosition, -Vector3.up); //ship needs to be turning towards the position on the bezier curve, so use lookAt
-                transform.position = new Vector3(newPosition.x, transform.position.y, newPosition.z);
+                transform.position = new Vector3(newPosition.x, transform.position.y, newPosition.z); //set the position
             }
         
     }
     void RotateShip()
     {
-        transform.RotateAround(transform.position, new Vector3(0, 1, 0), Time.fixedDeltaTime * degreePerSecond);
+        transform.RotateAround(transform.position, new Vector3(0, 1, 0), Time.fixedDeltaTime * degreePerSecond); //rotate ship in y axis by set amount of degrees per frame
         totalRotation += Time.fixedDeltaTime * degreePerSecond;
-        Debug.Log("Current Rotation:" + transform.rotation);
     }
 }

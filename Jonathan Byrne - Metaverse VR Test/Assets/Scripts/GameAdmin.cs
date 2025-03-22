@@ -8,14 +8,14 @@ public class GameAdmin : MonoBehaviour
     [SerializeField] InputActionReference reset;
     [SerializeField] InputActionReference exit;
     // Start is called before the first frame update
-    private void OnEnable()
+    private void OnEnable() //this function is required for inputs that have an action type of button
     {
-        reset.action.started += GameReset;
+        reset.action.started += GameReset; //call this function
         exit.action.started += LeaveGame;
     }
     private void OnDisable()
     {
-        reset.action.started -= GameReset;
+        reset.action.started -= GameReset; //ensure that function is not called repeatedly
         exit.action.started -= LeaveGame;
     }
     void GameReset(InputAction.CallbackContext context)

@@ -24,18 +24,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "SwitchCamera",
+                    "name": "ExitGame",
                     "type": "Button",
-                    "id": "cfc91674-4f8d-4221-b494-5cd96ca7a1c9",
+                    "id": "159a73ab-5ed0-4fb5-b41c-d34dfe3782ab",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ExitGame",
+                    "name": "SwitchCamera",
                     "type": "Button",
-                    "id": "159a73ab-5ed0-4fb5-b41c-d34dfe3782ab",
+                    "id": "b9c0360f-f382-4f05-8521-8a23578c8665",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -166,23 +166,23 @@
                 },
                 {
                     "name": "",
-                    "id": "3771d15c-568a-4a51-8924-bbeaad06cb3e",
-                    "path": "<Keyboard>/#(C)",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "SwitchCamera",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "1d3804fd-2e8b-4f6d-a6af-4671905bdbf6",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "ExitGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "20e071fc-56e3-424d-b5ac-09d23c03d04c",
+                    "path": "<Keyboard>/#(C)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchCamera",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
