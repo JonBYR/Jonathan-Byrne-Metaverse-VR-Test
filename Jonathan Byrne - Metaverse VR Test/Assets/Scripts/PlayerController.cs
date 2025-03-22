@@ -14,10 +14,11 @@ public class PlayerController : MonoBehaviour
     bool showUI = false;
     [SerializeField] GameObject winPanel;
     [SerializeField] float dragWhileMoving;
+    private SwitchCameras cam;
     // Start is called before the first frame update
     void Start()
     {
-
+        cam = GetComponent<SwitchCameras>();
     }
 
     // Update is called once per frame
@@ -41,9 +42,11 @@ public class PlayerController : MonoBehaviour
     {
         if(!capsized)
         {
+            if (moveDirection.y > 0) cam.ChangePriorities(true);
+            else if (moveDirection.y < 0) cam.ChangePriorities(false);
             if (moveDirection.x != 0 && moveDirection.y != 0)
             {
-                Debug.Log("Current up: " + transform.up);
+                Debug.Log(moveDirection.y);
                 playerRb.angularDrag = 0f;
                 playerRb.AddTorque(transform.up * moveDirection.x * torqueSpeed); //turning will be in the y axis
             }
