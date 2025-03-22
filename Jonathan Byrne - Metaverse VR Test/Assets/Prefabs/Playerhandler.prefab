@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   backCamera: {fileID: 0}
-  cameraButton: {fileID: -5622710644236921568, guid: f0fb076739cae0d4b89d81bcd6903d54, type: 3}
+  cameraButton: {fileID: -7335743326105189134, guid: f0fb076739cae0d4b89d81bcd6903d54, type: 3}
 --- !u!1001 &8231308613643504691
 PrefabInstance:
   m_ObjectHideFlags: 0

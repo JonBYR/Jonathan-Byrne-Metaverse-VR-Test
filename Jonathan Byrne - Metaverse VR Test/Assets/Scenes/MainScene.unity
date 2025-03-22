@@ -683,7 +683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: timeScale
-      value: 0.01
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: checkpoints.Array.size
@@ -881,7 +881,7 @@ MonoBehaviour:
   m_CameraRadius: 3
   m_Strategy: 0
   m_MaximumEffort: 4
-  m_SmoothingTime: 0.22
+  m_SmoothingTime: 0
   m_Damping: 0
   m_DampingWhenOccluded: 0
   m_OptimalTargetDistance: 0
@@ -2207,7 +2207,7 @@ MonoBehaviour:
   m_CameraRadius: 3
   m_Strategy: 0
   m_MaximumEffort: 4
-  m_SmoothingTime: 0.22
+  m_SmoothingTime: 0
   m_Damping: 0
   m_DampingWhenOccluded: 0
   m_OptimalTargetDistance: 0
@@ -3230,7 +3230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: timeScale
-      value: 0.01
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: checkpoints.Array.size
@@ -3888,7 +3888,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: timeScale
-      value: 0.01
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: checkpoints.Array.size
@@ -5181,7 +5181,7 @@ MonoBehaviour:
   m_UpdateMethod: 2
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
-    m_Style: 2
+    m_Style: 0
     m_Time: 2
     m_CustomCurve:
       serializedVersion: 2
@@ -6282,8 +6282,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 435555821}
     - target: {fileID: 8231308613270224416, guid: f3231fb7d99033443ad0b687536b2673, type: 3}
+      propertyPath: moveForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8231308613270224416, guid: f3231fb7d99033443ad0b687536b2673, type: 3}
       propertyPath: torqueSpeed
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8231308613270224416, guid: f3231fb7d99033443ad0b687536b2673, type: 3}
       propertyPath: torquePosition
@@ -6291,7 +6295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8231308613270224416, guid: f3231fb7d99033443ad0b687536b2673, type: 3}
       propertyPath: dragWhileMoving
-      value: 0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8231308613270224418, guid: f3231fb7d99033443ad0b687536b2673, type: 3}
       propertyPath: m_Enabled

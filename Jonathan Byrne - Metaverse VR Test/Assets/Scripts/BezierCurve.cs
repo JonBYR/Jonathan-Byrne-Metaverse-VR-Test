@@ -59,6 +59,5 @@ public class BezierCurve : MonoBehaviour
     {
         transform.RotateAround(transform.position, new Vector3(0, 1, 0), Time.fixedDeltaTime * degreePerSecond);
         totalRotation += Time.fixedDeltaTime * degreePerSecond;
-        Debug.Log("Current Rotation:" + transform.rotation);
     }
 }

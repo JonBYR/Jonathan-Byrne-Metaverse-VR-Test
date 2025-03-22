@@ -1,30 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine; //https://www.youtube.com/watch?v=iasDPyC0QOg used this tutorial in order to implement the bouyancy for the speedboat. This is because the bouyancy needs to be calculated at other points around
-//the boat, rather than the midpoint of the boat
+using UnityEngine; //https://www.youtube.com/watch?v=iasDPyC0QOg used this tutorial to create the code for the bouyancy for the speedboat.
+//This allows for bouyancy to be calculated at different pivot points, rather than the midpoint of the boat, allowing it to keep afloat while moving under torque, rather than submerging in the ocean
 
 public class PlayerBuoyancy : MonoBehaviour
 {
     [SerializeField] Transform[] floatingTransforms; //get Transforms of all positions that allow object to be bouyant
-
     [SerializeField] float underWaterDrag = 3f;
-
     [SerializeField] float underWaterAngularDrag = 1f;
-
     [SerializeField] float airDrag = 0f;
-
     [SerializeField] float airAngularDrag = 0.05f;
-
     [SerializeField] float power = 15f; //upswards force to keep object bouyant
-
     [SerializeField] float depth = 0f; //height of the water
-
-
-
     Rigidbody playerRb;
-
     bool underwater;
-
     int pointsUnderWater; //number of points currently submerged
 
     // Start is called before the first frame update
@@ -67,7 +56,7 @@ public class PlayerBuoyancy : MonoBehaviour
     }
     void SwitchState(bool submerged)
     {
-        if (submerged) //apply relevant drag to objects above or below the water
+        if (submerged) //apply relevant drag forces to objects above or below the water
         {
             playerRb.drag = underWaterDrag; //required drag forces for a submerged object
             playerRb.angularDrag = underWaterAngularDrag;
