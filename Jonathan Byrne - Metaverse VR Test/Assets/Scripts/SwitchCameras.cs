@@ -7,14 +7,14 @@ public class SwitchCameras : MonoBehaviour
 {
     [SerializeField] CinemachineVirtualCamera mainCamera;
     [SerializeField] CinemachineVirtualCamera backCamera;
-    [SerializeField] InputActionReference cameraButton;
-    private CinemachineVirtualCamera currentCamera;
-    // Start is called before the first frame update
+    //[SerializeField] InputActionReference cameraButton;
+    //private CinemachineVirtualCamera currentCamera;
+    //Initial code to change from forward to backwards camera was done via a button press, however it was felt that the camera reversing when the player reversed was more natural.
+    //Initial code is kept in just for testing purposes
     /*
     void Start()
     {
         currentCamera = mainCamera;
-        ChangePriorities(currentCamera);
     }
 
     private void OnEnable()

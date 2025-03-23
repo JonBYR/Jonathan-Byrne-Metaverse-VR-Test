@@ -165,7 +165,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34483585}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -722.54, y: 0, z: 399.8}
+  m_LocalPosition: {x: -654, y: 0, z: 220}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -643,7 +643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4072164758961363193, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 69.52371
+      value: 195.7
       objectReference: {fileID: 0}
     - target: {fileID: 4072164758961363193, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -651,7 +651,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4072164758961363193, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 326.0523
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 4072164758961363193, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -684,6 +684,10 @@ PrefabInstance:
     - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: timeScale
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
+      propertyPath: drawBezier
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: checkpoints.Array.size
@@ -862,7 +866,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431246247}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
   m_Name: 
@@ -1115,7 +1119,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: timeScale
-      value: 0.01
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
+      propertyPath: drawBezier
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: degreePerSecond
@@ -1266,7 +1274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627378702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -172, y: 0, z: 122}
+  m_LocalPosition: {x: -172, y: 0, z: 42.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1470,7 +1478,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739100114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -619.7, y: 0, z: 498.8}
+  m_LocalPosition: {x: -619.7, y: 0, z: 294}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2125,6 +2133,10 @@ PrefabInstance:
       value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
+      propertyPath: drawBezier
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: checkpoints.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -2225,7 +2237,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 935194858}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
   m_Name: 
@@ -2242,7 +2254,7 @@ MonoBehaviour:
   m_DistanceLimit: 0.7
   m_MinimumOcclusionTime: 0
   m_CameraRadius: 3
-  m_Strategy: 0
+  m_Strategy: 2
   m_MaximumEffort: 4
   m_SmoothingTime: 0
   m_Damping: 0
@@ -2329,7 +2341,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 982450875}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -215.8, y: 0, z: 532.2}
+  m_LocalPosition: {x: -75, y: 0, z: 226.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2615,7 +2627,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055196779}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -669.6, y: 0, z: 576.5}
+  m_LocalPosition: {x: -641, y: 0, z: 403}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2760,7 +2772,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138228786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -194.1, y: 0, z: 647.95}
+  m_LocalPosition: {x: -71.4, y: 0, z: 343.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3259,6 +3271,10 @@ PrefabInstance:
       value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
+      propertyPath: drawBezier
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: checkpoints.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -3323,7 +3339,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316045087}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -300.69, y: 1.5, z: 652.19}
+  m_LocalPosition: {x: -174.8, y: 1.5, z: 433.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3461,7 +3477,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356204753}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -404, y: 0, z: 580}
+  m_LocalPosition: {x: -169, y: 0, z: 580}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3769,7 +3785,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1513142063}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -528.3, y: 0, z: 573.8}
+  m_LocalPosition: {x: -398, y: 0, z: 497}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3850,7 +3866,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1569909021}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -446.4, y: 0, z: 662.7}
+  m_LocalPosition: {x: -271, y: 0, z: 662.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3915,6 +3931,10 @@ PrefabInstance:
     - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: timeScale
       value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
+      propertyPath: drawBezier
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: checkpoints.Array.size
@@ -4054,7 +4074,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1617779761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -302.4, y: 1.5, z: 530.8}
+  m_LocalPosition: {x: -174.1, y: 1.5, z: 122.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4929,7 +4949,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892282457}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -273, y: 0, z: 122}
+  m_LocalPosition: {x: -273, y: 0, z: 54.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
