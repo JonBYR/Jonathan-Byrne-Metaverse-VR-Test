@@ -23,11 +23,7 @@ public class PlayerBuoyancy : MonoBehaviour
     {
         playerRb = this.GetComponent<Rigidbody>();
     }
-
-
-
     // Update is called once per frame
-
     void FixedUpdate()
 
     {

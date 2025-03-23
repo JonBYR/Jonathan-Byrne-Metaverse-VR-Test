@@ -23,7 +23,7 @@ public static class BezierEquation
     {
         if(on) //using lerps is not optimal so a bool is passed from the enemy ships that can be turned on or off in the inspector
         { //leaving it off bypasses this code
-            Debug.DrawLine(p0, p1, Color.green); //drawing gizmo code was taken from this tutorial, which contained a public repo
+            Debug.DrawLine(p0, p1, Color.green); //drawing gizmo code was taken from the public repo linked by this tutorial
             Debug.DrawLine(p1, p2, Color.green); //https://www.youtube.com/watch?v=wtoPrJadjz4
             Debug.DrawLine(p2, p3, Color.green);
 

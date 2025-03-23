@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BezierCurve : MonoBehaviour
+public class SunseekerController : MonoBehaviour
 {
     [SerializeField] float time;
     bool endReached = false;
@@ -12,11 +12,6 @@ public class BezierCurve : MonoBehaviour
     [SerializeField] float degreePerSecond = 10f;
     [SerializeField] float rotationAmount = 180f;
     [SerializeField] bool drawBezier = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
     Vector3 GetBezier(List<GameObject> points, float t)
     {
         Vector3 resultingPos = BezierEquation.GetPointOnCurve(points[0].transform.position, points[1].transform.position, points[2].transform.position, points[3].transform.position, t);
