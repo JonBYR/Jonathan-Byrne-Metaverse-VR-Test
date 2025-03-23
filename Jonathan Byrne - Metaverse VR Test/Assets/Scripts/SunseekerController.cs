@@ -12,8 +12,14 @@ public class SunseekerController : MonoBehaviour
     [SerializeField] float degreePerSecond = 10f;
     [SerializeField] float rotationAmount = 180f;
     [SerializeField] bool drawBezier = false;
+    [SerializeField] bool startPathReversed = false;
+    private void Start()
+    {
+        if (startPathReversed) checkpoints.Reverse(); //if the bool is turned on in the inspector have the starting path reversed
+    }
     Vector3 GetBezier(List<GameObject> points, float t)
     {
+        //this function is adapted from a public repo linked from this video tutorial https://www.youtube.com/watch?v=wtoPrJadjz4
         Vector3 resultingPos = BezierEquation.GetPointOnCurve(points[0].transform.position, points[1].transform.position, points[2].transform.position, points[3].transform.position, t);
         BezierEquation.DrawLines(points[0].transform.position, points[1].transform.position, points[2].transform.position, points[3].transform.position, t, drawBezier);
         return resultingPos;

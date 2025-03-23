@@ -683,11 +683,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: timeScale
-      value: 0.05
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: drawBezier
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
+      propertyPath: startPathReversed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: checkpoints.Array.size
@@ -797,7 +801,6 @@ GameObject:
   m_Component:
   - component: {fileID: 431246249}
   - component: {fileID: 431246248}
-  - component: {fileID: 431246250}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: Untagged
@@ -859,36 +862,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &431246250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 431246247}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_CollideAgainst:
-    serializedVersion: 2
-    m_Bits: 1
-  m_IgnoreTag: 
-  m_TransparentLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_MinimumDistanceFromTarget: 1
-  m_AvoidObstacles: 1
-  m_DistanceLimit: 0.7
-  m_MinimumOcclusionTime: 0
-  m_CameraRadius: 3
-  m_Strategy: 0
-  m_MaximumEffort: 4
-  m_SmoothingTime: 0
-  m_Damping: 0
-  m_DampingWhenOccluded: 0
-  m_OptimalTargetDistance: 0
 --- !u!1 &435555821
 GameObject:
   m_ObjectHideFlags: 0
@@ -2100,7 +2073,7 @@ GameObject:
   - component: {fileID: 821231215}
   - component: {fileID: 821231214}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2406,6 +2379,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
+      propertyPath: startPathReversed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985598642447898076, guid: bb741b451cca34847a4a538e90f8eef3, type: 3}
       propertyPath: checkpoints.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -2437,7 +2414,6 @@ GameObject:
   m_Component:
   - component: {fileID: 935194860}
   - component: {fileID: 935194859}
-  - component: {fileID: 935194861}
   m_Layer: 0
   m_Name: BackCamera
   m_TagString: Untagged
@@ -2499,36 +2475,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &935194861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 935194858}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_CollideAgainst:
-    serializedVersion: 2
-    m_Bits: 1
-  m_IgnoreTag: 
-  m_TransparentLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_MinimumDistanceFromTarget: 1
-  m_AvoidObstacles: 1
-  m_DistanceLimit: 0.7
-  m_MinimumOcclusionTime: 0
-  m_CameraRadius: 3
-  m_Strategy: 2
-  m_MaximumEffort: 4
-  m_SmoothingTime: 0
-  m_Damping: 0
-  m_DampingWhenOccluded: 0
-  m_OptimalTargetDistance: 0
 --- !u!1 &948925653 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 488956255944310750, guid: 69b1c9a3a9ee2f541a43dc387f4ac721, type: 3}
