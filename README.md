@@ -8,7 +8,7 @@ Unity version used: Unity 2021.3.45f1 LTS
 
 # Build
 
-This project also contains a build which runs in Windows. This is contained in the folder "Jonathan Byrne - Metaverse VR Build". The player can use WASD or the arrow keys to move the boat. Pressing W will ensure that the camera shows the player what is in front of them while
+This project also contains a build which runs in Windows. The build is found in the releases section of the repo, where a zip file can be downloaded. The player can use WASD or the arrow keys to move the boat. Pressing W will ensure that the camera shows the player what is in front of them while
 pressing S switches the camera so that the player can see behind them when reversing. Turning is implemented by pressing A/D/Left Arrow/Right Arrow whilst accelerating or deaccelerating (W/S/Up Arrow/Down Arrow). The scene can be reset if the boat has capsized by 
 pressing R and the application can be exited by pressing ESC. On completion of the game a UI panel will display with a button, this button can be pressed using the mouse.
 
