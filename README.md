@@ -3,6 +3,7 @@
 This is a submission for Metaverse VR, where a Unity project has been created in the folder "Jonathan Byrne - Metaverse VR Test" which contains the following: a scene with a skybox, directional lighting, a bloom post processing effect and a water shader. 
 A player boat has been created that has acceleration, deacceleration and steering inertia. Sunseeker boats have been implemented and their paths are created through the use of Bezier Curves. Collisions between the player, sunseekers and island have been established.
 Static wall objects have also been created to contain the play area, with collisions also implemented. There is an objective zone marked for the player to dock and the player must dock portside to successfully pass the simulation. A third person perspective is used.
+
 <br>Unity packages used: Cinemachine, Post Processing, Universal Rendering Pipeline, Input System, TextMeshPro
 <br>Unity version used: Unity 2021.3.45f1 LTS
 
